@@ -134,12 +134,18 @@ Profile.prototype.seen = function (timeAgo) {
 	return label('Last Seen') + moment(timeAgo).fromNow();
 };
 
+Profile.prototype.vip = function (user) {
+	if (isVip(user)) return font('#6390F0', '(<b>VIP User</b>)');
+	return '';
+	
+};
+
 Profile.prototype.show = function (callback) {
 	let userid = toId(this.username);
 
 	return this.buttonAvatar() +
 		SPACE + this.name() + BR +
-		SPACE + this.group() + BR +
+		SPACE + this.group() + SPACE + this.vip(userid) + BR +
 		SPACE + this.money(Db('money').get(userid, 0)) + BR +
 		SPACE + this.seen(Db('seen').get(userid)) +
 		'<br clear="all">';
@@ -160,3 +166,4 @@ exports.commands = {
 	},
 	profilehelp: ["/profile -	Shows information regarding user's name, group, money, and when they were last seen."],
 };
+
