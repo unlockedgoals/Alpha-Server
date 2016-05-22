@@ -22,7 +22,7 @@ function Profile(isOnline, user, image) {
 	this.image = image;
 
 	this.username = Tools.escapeHTML(this.isOnline ? this.user.name : this.user);
-	this.url = Config.avatarurl || '';
+	this.url = Config.avatarurl || 'http://149.56.141.67:8000';
 }
 
 /**
