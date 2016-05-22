@@ -1,3 +1,5 @@
+"use strict";
+
 exports.commands = {
     rf: 'roomfounder',
 	roomfounder: function (target, room, user) {
