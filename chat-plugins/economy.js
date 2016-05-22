@@ -65,21 +65,21 @@ function logMoney(message) {
  * @param {Array} shop
  * @return {String} display
  */
-function getShopDisplay(shop) {
-	let display = "<table border='1' cellspacing='0' cellpadding='5' width='100%'>" +
-					"<tbody><tr><th>Command</th><th>Description</th><th>Cost</th></tr>";
-	let start = 0;
-	while (start < shop.length) {
-		display += "<tr>" +
-						"<td align='center'><button name='send' value='/buy " + shop[start][0] + "'><b>" + shop[start][0] + "</b></button>" + "</td>" +
-						"<td align='center'>" + shop[start][1] + "</td>" +
-						"<td align='center'>" + shop[start][2] + "</td>" +
-					"</tr>";
-		start++;
-	}
-	display += "</tbody></table><center>To buy an item from the shop, use /buy <em>command</em>.</center>";
-	return display;
-}
+ function getShopDisplay(shop) {
+ 	let display = '<table syle="width: 100%; border: 1px solid #33cccff; border-top-right-radius: 4px; border-top-left-radous: 4px; background: rgba(0, 153, 255, 0.7)"' +
+ 					'<tr><th color="#502243">Item</th><th color="#502243">Description</th><th color="#502243">Cost</th></tr>';
+ 	let start = 0;
+ 	while (start < shop.length) {
+ 		display += "<tr>" +
+ 						'<td style="background: rgba(0, 153, 255,0.5); border: 1px solid #33ccff; padding: 5px; border-radius: 4px; text-align: center;"><button name="send" value="/buy ' + shop[start][0] + '" style="border: 1px solid #98D9F7; background: #9EFD9F7; color: #9EFD9F7; text-shadow: 0px 0px 2px #e7f6fd; padding: 5px; border-radius: 4px;">' + shop[start][0] + '</button>' + '</td>' +
+ 						'<td style="background: rgba(0, 153, 255,0.5); border: 1px solid #33ccff; padding: 5px; border-radius: 4px; text-align: center;">' + shop[start][1] + '</td>' +
+ 						'<td style="background: rgba(0, 153, 255,0.5); border: 1px solid #33ccff; padding: 5px; border-radius: 4px; text-align: center;">' + shop[start][2] + '</td>' +
+ 					"</tr>";
+ 		start++;
+ 	}
+ 	display += '</table><div style="border: 1px solid #33ccff; border-top: none; background: rgba(0, 153, 255, 0.5); color: #502243; text-shadow: 0px 0px 2px #e7f6fd; padding: 5px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;"><center>To buy an item from the shop, use /buy command.</center></div>';
+ 	return display;
+ }
 
 
 /**
