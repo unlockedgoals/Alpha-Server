@@ -22,7 +22,7 @@ function Profile(isOnline, user, image) {
 	this.image = image;
 
 	this.username = Tools.escapeHTML(this.isOnline ? this.user.name : this.user);
-	this.url = Config.avatarurl || 'http://149.56.141.67:8000';
+	this.url = 'http://149.56.141.67';
 }
 
 /**
@@ -140,11 +140,21 @@ Profile.prototype.vip = function (user) {
 	
 };
 
+Profile.prototype.flag = function (user) {
+	if (Users(user)) {
+		let userFlag = geoip.lookupCountry(Users(user).latestIp);
+		if (userFlag) {
+			return '<img src="https://github.com/kevogod/cachechu/blob/master/flags/' + userFlag.toLowerCase() + '.png?raw=true" height=10 title="' + userFlag + '">';
+		}
+	}
+	return '';
+};
+
 Profile.prototype.show = function (callback) {
 	let userid = toId(this.username);
 
 	return this.buttonAvatar() +
-		SPACE + this.name() + BR +
+		SPACE + this.name() + SPACE + this.flag(userid) +  BR +
 		SPACE + this.group() + SPACE + this.vip(userid) + BR +
 		SPACE + this.money(Db('money').get(userid, 0)) + BR +
 		SPACE + this.seen(Db('seen').get(userid)) +
