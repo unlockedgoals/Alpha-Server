@@ -3,6 +3,7 @@
 
 let color = require('../config/color');
 let moment = require('moment');
+let geoip = require('geoip-ultralight');
 
 let BR = '<br>';
 let SPACE = '&nbsp;';
