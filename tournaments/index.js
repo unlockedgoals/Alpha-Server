@@ -834,6 +834,23 @@ class Tournament {
 				Db('money').set(rid, Db('money').get(rid, 0) + secondMoney);
 				this.room.addRaw("<b><font color='" + color + "'>" + Tools.escapeHTML(runnerUp) + "</font> has won " +  "<font color='" + color + "'>" + secondMoney + "</font>" + currencyName(secondMoney) + " for winning the tournament!</b>");
 			}
+			// Award Card
+			let colors = {
+			    Mythic: '#D82A2A',
+			    Legendary: '#E8AB03',
+			    Epic: '#73DF14',
+			    Rare: '#2DD1B6',
+			    Uncommon: '#2D3ED1',
+			    Common: '#000',
+			};
+			let card = '';
+			card += tourCard(tourSize, wid);
+			let cardDetail = card.split(',');
+			let cardRarity = cardDetail[0];
+			let cardName = cardDetail[2];
+
+			this.room.addRaw("<b><font color='" + color + "'>" + Tools.escapeHTML(winner) + "</font> has won " + "<font color='" + colors[cardRarity] + "'>" + cardRarity + "</font> " + cardName + " for winning the tournament!</b>");
+			// Award Card
 		}
 		delete exports.tournaments[this.room.id];
 		delete this.room.game;
@@ -1036,6 +1053,25 @@ let commands = {
 		},
 		runautodq: function (tournament) {
 			tournament.runAutoDisqualify(this);
+
+		},
+		remind: function (tournament, user) {
+			var users = tournament.generator.getAvailableMatches().toString().split(',');
+			var offlineUsers = [];
+			for (var u in users) {
+				var targetUser = Users.get(users[u]);
+				if (!targetUser) {
+					offlineUsers.push(users[u]);
+					continue;
+				} else if (!targetUser.connected) {
+					offlineUsers.push(targetUser.userid);
+					continue;
+				} else {
+					targetUser.popup('You have a tournament battle in the room "' + tournament.room.title + '". If you do not start soon you may be disqualified.');
+				}
+			}
+			tournament.room.addRaw('<b>Players have been reminded of their tournament battles by ' + user.name + '.</b>');
+			if (offlineUsers.length > 0 && offlineUsers !== '') tournament.room.addRaw('<b>The following users are currently offline: ' + offlineUsers + '.</b>');
 		},
 		scout: 'setscouting',
 		scouting: 'setscouting',
