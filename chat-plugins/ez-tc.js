@@ -10,7 +10,7 @@ var trainerCards = {};
 function loadTrainerCards () {
 	try {
 		trainerCards = serialize.unserialize(fs.readFileSync('config/trainercards.json', 'utf8'));
-		Object.merge(CommandParser.commands, trainerCards);
+		Object.assign(CommandParser.commands, trainerCards);
 	} catch (e) {}
 }
 
@@ -20,7 +20,7 @@ setTimeout(function load() {
 
 function saveTrainerCards() {
 	fs.writeFileSync('config/trainercards.json', serialize.serialize(trainerCards));
-	Object.merge(CommandParser.commands, trainerCards);
+	Object.assign(CommandParser.commands, trainerCards);
 }
 
 exports.commands = {
