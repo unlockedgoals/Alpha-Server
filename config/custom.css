@@ -1,0 +1,255 @@
+  body {
+    background: url("http://img0.gtsstatic.com/wallpapers/996a54217e89a6a6f50bb080f894a422_large.jpeg") no-repeat center center fixed !important; 
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .ps-room.ps-room-light {
+    background: rgba(0, 0, 0);
+    border-left: 1px solid #000;
+  }
+  
+  .ps-room.ps-room-light.scrollable {
+    background: rgba(0, 0, 0);
+    color: #FFF;
+    text-shadow: 0px -1px 0px #0F1923;
+  }
+  
+  .header {
+    background: url("http://img01.deviantart.net/6b41/i/2011/140/f/4/dark_blue_gradient_by_msketchley-d3gs0d8.jpg") no-repeat;
+	background-size: cover;
+  }
+
+  .userbar .username {
+    text-shadow: 1px 1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, -1px -1px 0px #000;
+  }
+
+  .menugroup .button.disabled, .menugroup .button.disabled:hover {
+    background: #496491;
+    border: 1px solid #304C7E;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 0px 1px rgba(0, 0, 0, 0.2) inset;
+    color: #DDD;
+  }
+  
+
+  .battleform .label {
+    opacity: 0;
+  }
+  
+  .roomlist {
+    width: 100%;
+    max-width: 100% !important;
+  }
+  
+  .roomlist h2 {
+    color: #FFF;
+    text-shadow: 1px 1px #0F1923;
+  }
+  
+  .roomlist h2:hover {
+    color: #FFF;
+    text-shadow: 0px -1px 0px #0F1923;
+  }
+
+  .mainmenufooter a {
+    color: #FFF;
+    text-shadow: 1px 1px 0px #304C7E, 1px -1px 0px #304C7E, -1px 1px 0px #304C7E, -1px -1px 0px #304C7E;
+  }
+  
+  .maintabbarbottom {
+    border-color: #000;
+    box-shadow: 1px 1px 5px #000;
+    z-index: 4;
+  }
+  
+  .tabbar a.button.cur, .tabbar a.button.cur:hover {
+    border-color: #000;
+    z-index: 4;
+  }
+  
+  .tabbar a.button {
+    border-color: #000;
+    font-family: Verdana, sans-serif;
+    z-index: 3;
+  }
+  
+  
+  .userlist {
+    background: rgba(0, 0, 0, 1);
+    border: none;
+    right: 1px !important;
+    color: #FFF;
+    text-shadow: 1px 1px #000;
+  }
+  
+  .userlist li button {
+    background: rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px #000;
+  }
+  
+  .userlist li button:hover {
+    background: transparent;
+  }
+  
+  .userlist li em.group {
+    color: #DDD;
+    text-shadow: 1px 1px #000;
+  }
+  
+  .userlist li {
+    border-bottom: 1px solid #000;
+  }
+  
+  .chat-log {
+    bottom: 38px;
+    left: 144px !important;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    background: none repeat scroll 0% 0% rgba(242, 247, 250, 0.925);
+  }
+  
+  .message .utilichart .pokemonnamecol {
+    color: #000;
+    text-shadow: none;
+  }
+  
+  .message .utilichart .abilitycol, .message .utilichart .statcol {
+    color: #353535;
+    text-shadow: none;
+  }
+  
+  .message .utilichart .statcol em, .message .utilichart .bstcol em, .message .utilichart .numcol {
+    color: #505050;
+    text-shadow: none;
+  }
+  
+  .chat-log-add {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    left: 145px !important;
+  }
+  
+  .pm-log, .pm-window.focused .pm-log {
+    border-color: #000;
+  }
+  
+  .pxInta, .pxInta:focus, .pxInta:link, .pxInta:visited, .pxInta:active, .pxInta:hover {
+    pointer-events: none !important;
+    cursor: text !important;
+    border: none !important;
+    color: #000 !important;
+    text-decoration: none !important;
+    padding-bottom: 0px !important;
+  }
+  
+  .pm-log-add, .pm-window.focused .pm-log-add {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: #000;
+  }
+  
+  .pm-window h3, .pm-window h3:hover {
+    border-color: #000;
+    background: rgba(0, 0, 0, 0.5) url("http://play.pokemonshowdown.com/sprites/bw/seadra.png") right top no-repeat;
+    color: #FFF;
+    text-shadow: 0px -1px 0px #0F1923;
+  }
+  
+  .pm-window.focused h3,  .pm-window.focused h3:hover {
+    border-color: #000;
+    background: rgba(0, 0, 0, 0.5) url("http://i.imgur.com/6FVJQvE.png?1") right top no-repeat;
+    color: #FFF;
+    text-shadow: 0px -1px 0px #0F1923;
+  }
+  
+  .pm-window h3 small {
+    color: #DDD;
+  }
+  
+  .pm-window h3 .closebutton, .pm-window h3 .minimizebutton, .pm-window h3:hover .minimizebutton {
+    color: #DDD;
+  }
+  
+  .pm-window h3 .closebutton:hover, .closebutton:hover {
+    color: #E89797;
+    background: transparent;
+    border: none;
+  }
+  
+  .pm-window h3 .minimizebutton:hover {
+    color: #E8C297;
+    background: transparent;
+    border: none;
+  }
+  
+  .challenge {
+	padding: 2pt;
+    border: 1px solid #304C7E;
+    background-color: #99ccff;
+  }
+  
+  .challenge .select {
+    opacity: 0.8;
+  }
+  
+  .challenge .select:hover {
+    opacity: 1;
+  }
+  
+  .textbox, .textbox:hover {
+    background-color:#fff;
+	border-color: #000;
+    box-shadow: none;
+    font-family: "helvetica neue", Helvetica, Verdana, sans-serif;
+  }
+  
+  .textbox:focus {
+    box-shadow: 0px 0px 2px #3A569F;
+    border-color: #3A569F;
+  }
+  
+  button {
+    font-family: Verdana, sans-serif;
+	padding: 3pt 4pt;
+	color: #000;
+  }
+  
+  button:hover {
+    background: #496491;
+    border: 1pt solid #304C7E;
+  }
+
+  
+  
+  /* Battle Background */
+
+  .backdrop {
+    width: 640px;
+    height: 360px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    background: -50px -90px;
+    opacity: 1 !important;
+  }
+  
+  .backdrop:before{
+    display: block;
+    content: "";
+    background: url("http://i.imgur.com/u8MCjow.png");
+    background-size: cover;
+    width: 640px;
+    height: 360px;
+  }
+
+  .backdrop:after{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 640px;
+    height: 360px;
+  }
+ 
